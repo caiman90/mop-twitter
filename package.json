@@ -1,0 +1,24 @@
+{
+  "name": "mop-twitter",
+  "version": "1.0.0",
+  "description": "MOP TWITTER CLONE ",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/caiman90/mop-twitter.git"
+  },
+  "dependencies": {
+     "express":"*",
+    "body-parser":"*",
+    "mongoose":"*"
+  },
+  "author": "Rejhan Hrnjic",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/caiman90/mop-twitter/issues"
+  },
+  "homepage": "https://github.com/caiman90/mop-twitter#readme"
+}
