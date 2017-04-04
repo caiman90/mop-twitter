@@ -10,7 +10,7 @@ var user = require("./models/user");
 var tweets = require("./models/tweet");
 
 app.use(bodyParser.json());
-app.use(express.static(__dirname+'client'));
+app.use(express.static(__dirname+'/client'));
 // Connection to mongoose
 mongoose.connect("mongodb://localhost:27017/mop-twitter");
 var db = mongoose.connection;
@@ -27,5 +27,14 @@ app.get('/api/tweets',function(req,res){
       res.json(tweets);
    });
 });
+app.get('/api/user/:_id',function(req,res){
+    user.getUserById(req.params._id,function (error,user) {
+        if(error){
+            throw error;
+        }
+        res.json(user);
+    });
+});
+
 app.listen(PORT_NUMBER);
 console.log("Mop twitter started at port :"+ PORT_NUMBER);
