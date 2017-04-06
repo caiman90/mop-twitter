@@ -8,8 +8,14 @@ mopTwitter.config(function ($routeProvider) {
         controller:'TweetsController',
         templateUrl:'views/tweets.html'
     }).when('/tweetDetails',{
-            controller:'TweetsController',
-            templateUrl:'views/tweets.html'
+        controller:'TweetsController',
+        templateUrl:'views/tweets.html'
+    }).when('/login',{
+        controller:'LoginController',
+        templateUrl:'views/login.html'
+    }).when('/register',{
+        controller:'RegisterController',
+        templateUrl:'views/register.html'
     }).otherwise({redirectTo:'/'});
 
 });
